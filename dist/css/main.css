@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a, button {
+  all: unset;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 32px;
+  background: hsl(0, 0%, 100%);
+}
+
+.logo img {
+  width: 100px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-nav {
+  display: none;
+}
+
+.hamburger__button > .close {
+  display: none;
+}
+
+.portfolio-slider img {
+  display: block;
+}
+.portfolio-slider .slider__item {
+  position: relative;
+}
+.portfolio-slider .item__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.portfolio-slider .item__title {
+  margin-top: 2rem;
+}
+.portfolio-slider .item__description {
+  margin-top: 1rem;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 18px;
+}/*# sourceMappingURL=main.css.map */
