@@ -1,3 +1,29 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+button, .btn{
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+
+.dark-btn{
+    background-color: $clr-primary-peach;
+    color: $clr-primary-white;
+}
+
+.dark-btn:hover{
+    background-color: $clr-secondary-light-peach;
+}
+
+.light-btn{
+    background-color: $clr-primary-white;
+    color: $clr-primary-black;
+}
+
+.light-btn:hover{
+    background-color: $clr-secondary-light-peach;
+    color: $clr-primary-white
+}

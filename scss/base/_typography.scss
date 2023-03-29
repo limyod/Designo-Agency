@@ -1,7 +1,66 @@
 /**
  * Basic typography style for copy text
  */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+.letter-spacing-1 {letter-spacing: normal;}
+.letter-spacing-2 {letter-spacing: $letter-spacing-2;}
+.letter-spacing-3 {letter-spacing: $letter-spacing-3;}
+
+.line-height-1{line-height: $line-height-1; }
+.line-height-2{line-height: $line-height-2; }
+
+.uppercase {text-transform: uppercase;}
+
+.fs-300{size: $fs-300;}
+.fs-400 {size: $fs-400;}
+.fs-500 {size: $fs-500;}
+.fs-600 {size: $fs-600;}
+
+.fw-400{font-weight: 400;}
+.fw-500 {font-weight: 500;}
+.fw-600 {font-weight: 600;}
+.fw-700 {font-weight: 700;
+}
+
+.text-peach {color: $clr-primary-peach;}
+.text-black {color: $clr-primary-black;}
+.text-white {color: $clr-primary-white;}
+
+.text-light-grey {color: $clr-secondary-light-grey;}
+.text-light-peach {color: $clr-secondary-light-peach;}
+.text-dark-grey {color: $clr-secondary-dark-grey;}
+
+.bg-peach{background-color: $clr-primary-peach;}
+.bg-black {background-color: $clr-primary-black;}
+.bg-white {background-color: $clr-primary-white;}
+
+.bg-light-grey{background-color: $clr-secondary-light-grey;}
+.bg-light-peach{background-color: $clr-secondary-light-peach;}
+.bg-dark-grey{background-color: $clr-secondary-dark-grey;}
+
+
 body {
-  color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  color: $clr-primary-black;
+  font-family: $text-font-stack;
+  line-height: $line-height-1;
+}
+
+h1{
+  font-weight: $fw-500;
+  size: $fs-600;
+  line-height: $line-height-2;
+}
+
+h2{
+  font-weight: $fw-500;
+  size: $fs-500;
+  letter-spacing: $letter-spacing-2;
+  line-height: $line-height-2;
+}
+
+h3{
+  font-weight: $fw-500;
+  size: $fs-400;
+  letter-spacing: $letter-spacing-3;
+  line-height: $line-height-1;
 }

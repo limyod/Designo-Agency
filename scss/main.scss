@@ -4,7 +4,8 @@
 @import
   'abstracts/variables',
   'abstracts/functions',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/utilities';
 
 // 2. Vendors
 @import
@@ -13,7 +14,6 @@
 // 3. Base stuff
 @import
   'base/base',
-  'base/fonts',
   'base/typography',
   'base/helpers';
 
@@ -30,6 +30,3 @@
 @import
   'pages/home';
 
-// 7. Themes
-@import
-  'themes/default';
