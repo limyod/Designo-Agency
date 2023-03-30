@@ -51,15 +51,22 @@
     border-radius: 8px;
 }
 
-.overlap-next-block{
-    margin-bottom: calc(-1 * var(--overlap, 10rem));
+.overlap-footer{
+    margin-bottom: calc(-1 * $footer-overlap-sm);
     z-index: 10;
     position: relative;
 }
 
-.rel{
-    position:relative;
+@media (min-width: $md) {
+    .overlap-footer {
+        margin-bottom: calc(-1 * $footer-overlap-md);
+    }
 }
 
+@media (min-width: $lg) {
+    .overlap-footer {
+        margin-bottom: calc(-1 * $footer-overlap-lg);
+    }
+}
 
 

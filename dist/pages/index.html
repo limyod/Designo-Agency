@@ -10,14 +10,14 @@
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
 </head>
 <body>
-  <header class="flex align-center space-between">
+  <header class="primary-header container flex align-center space-between">
     <div class="logo">
-      <a href="./index.html"><img src="../../assets/shared/desktop/logo-dark.png" alt="Designo Logo"/></a>
+      <a href="./index.html"><img src="../../assets/shared/desktop/logo-dark.png" alt="Designo Logo logo dark"/></a>
     </div>
-    <button hidden class="mobile-nav-toggle"><span class="visually-hidden"
+    <button class="mobile-nav-toggle"><span class="visually-hidden"
         aria-expanded="false">Menu</span></button>
     <nav hidden>
-      <ul class="flex align-center">
+      <ul class="primary-navigation flex align-center nav-links">
         <li><a>Our Company</a></li>
         <li><a>Locations</a></li>
         <li><a>Contact</a></li>
@@ -25,7 +25,7 @@
     </nav>
   </header>
   <main class="flow">
-  <div class="bg-peach text-white grid container hero-phone">
+    <div class="bg-peach text-white grid container hero-phone">
     <div class="hero-phone-details flow">
       <h1>Award-winning custom designs and digital branding solutions</h1>
       <p>
@@ -35,29 +35,28 @@
       <button class="light-btn">Learn more</button>
     </div>
       <img src="../../assets/home/desktop/image-hero-phone.png">
-  </div>
-  <div class="container grid design-cards design-cards--home">
-    <div class="design-card border-radius web-design">
-      <div class="flow">
-        <h1>Web Design</h1>
-        <p>View Projects</p>
+    </div>
+    <div class="container grid design-cards design-cards--home">
+      <div class="design-card border-radius web-design">
+        <div class="flow design-card-info">
+          <h1>Web Design</h1>
+          <p>View Projects</p>
+        </div>
+      </div>
+      <div class="design-card border-radius app-design">
+        <div class="flow design-card-info">
+          <h1>App Design</h1>
+          <p>View Projects</p>
+        </div>
+      </div>
+      <div class="design-card border-radius graphic-design">
+        <div class="flow design-card-info">
+          <h1>Graphic Design</h1>
+          <p>View Projects</p>
+        </div>
       </div>
     </div>
-    <div class="design-card border-radius app-design">
-      <div class="design-card-overlay"></div>
-      <div class="flow design-card-info">
-        <h1>App Design</h1>
-        <p>View Projects</p>
-      </div>
-    </div>
-    <div class="design-card border-radius graphic-design">
-      <div class="flow">
-        <h1>Graphic Design</h1>
-        <p>View Projects</p>
-      </div>
-    </div>
-  </div>
-  <div class="container container--skills">
+    <div class="container container--skills">
     <div class="flex skills">
       <div class="flex skill align-center">
         <div class="grey-circle-overlay">
@@ -91,25 +90,50 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="border-radius bg-peach text-white container contact-card flow flex">
+    </div>
+    <div class="overlap-footer border-radius bg-peach text-white container contact-card flow flex">
     <div class="flow contact-card-text">
       <h1>Let’s talk about your project</h1>
       <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
     </div>
-    <a href="#" class="btn light-btn">Get in touch</button>
-  </div>
+    <a href="#" class="btn light-btn">Get in touch</a>
+    </div>
   </main>
-  Our company
-  Locations
-  Contact
+  <footer class="bg-black text-white">
+    <div class="container flow">
+      <div class="upper-footer flex">
+        <div class="logo">
+          <a href="./index.html"><img src="../../assets/shared/desktop/logo-light.png" alt="Designo Logo light" /></a>
+        </div>
+        <nav>
+          <ul class="flex align-center text-white nav-links uppercase">
+            <li><a href="#">Our Company</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex bottom-footer">
+        <div class="text-half-white flow">
+          <p class="fw-700">Designo Central Office</p>
+          <p>3886 Wellington Street</p>
+          <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+        <div class="text-half-white flow">
+          <p class="fw-700">Contact Us (Central Office)</p>
+          <p class="fw-700">P : +1 253-863-8967</p>
+          <p class="fw-700">M : contact@designo.com</p>
+        </div>
+        <ul class="flex icon-list">
+          <li><img src="../../assets/shared/desktop/icon-facebook.svg" alt="icon-facebook"></li>
+          <li><img src="../../assets/shared/desktop/icon-youtube.svg" alt="icon-youtube"></li>
+          <li><img src="../../assets/shared/desktop/icon-twitter.svg" alt="icon-twitter"></li>
+          <li><img src="../../assets/shared/desktop/icon-pinterest.svg" alt="icon-pinterest"></li>
+          <li><img src="../../assets/shared/desktop/icon-instagram.svg" alt="icon-instagram"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
   
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-  
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
 </body>
 </html>

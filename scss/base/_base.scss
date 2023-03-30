@@ -30,8 +30,11 @@ h4,
 h5,
 p,
 figure,
+ul,
+ol,
 picture {
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -58,11 +61,11 @@ ul, li{
  * Basic styles for links
  */
 a {
-  color: $clr-primary-black;
-  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
 
   @include on-event {
-    color: $clr-primary-black;
-    text-decoration: underline;
+    //color: $clr-primary-black;
+    //text-decoration: underline;
   }
 }

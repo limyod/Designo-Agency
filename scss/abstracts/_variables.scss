@@ -4,11 +4,9 @@
 
 ///Screen sizes
 /// 
-$s: 0;
+$s: 576px;
 $md: 768px;
 $lg: 992px;
-
-
 
 /// Regular font family
 /// @type List
@@ -48,21 +46,14 @@ $clr-secondary-light-peach: hsl(11 100% 80%);
 $clr-secondary-dark-grey: hsl(264 5% 20%);
 $clr-secondary-light-grey: hsl(210 17% 95%);
 
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
-
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+/// Footer overlap
+/// 
+$footer-overlap-sm: 10rem;
+$footer-overlap-md: 3.5rem;
+$footer-overlap-lg: 7rem;

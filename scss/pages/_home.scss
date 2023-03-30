@@ -71,17 +71,66 @@
 
 .design-cards{
     padding: 0;
+}
 
-    .graphic-design {
+.design-cards > .graphic-design {
+    grid-area: graphic;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image:
+        url(../../assets/home/mobile/image-graphic-design.jpg);
+}
+
+.design-cards > .web-design {
+    grid-area: web;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image:
+        url(../../assets/home/mobile/image-web-design.jpg);
+}
+
+.design-cards > .app-design {
+    grid-area: app;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image:
+        url(../../assets/home/mobile/image-app-design.jpg);
+}
+
+@media (min-width: $md) {
+    .design-cards>.graphic-design {
         grid-area: graphic;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: 
-            url(../../assets/home/desktop/image-graphic-design.jpg);
+        background-image:
+            url(../../assets/home/tablet/image-graphic-design.jpg);
     }
 
-    .graphic-design {
+    .design-cards>.web-design {
+        grid-area: web;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image:
+            url(../../assets/home/tablet/image-web-design-small.jpg);
+    }
+
+    .design-cards>.app-design {
+        grid-area: app;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image:
+            url(../../assets/home/tablet/image-app-design.jpg);
+    }
+}
+
+@media (min-width: $md) {
+    .design-cards>.graphic-design {
         grid-area: graphic;
         background-repeat: no-repeat;
         background-position: center;
@@ -89,22 +138,22 @@
         background-image:
             url(../../assets/home/desktop/image-graphic-design.jpg);
     }
-    
-    .web-design {
+
+    .design-cards>.web-design {
         grid-area: web;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: 
-            url(../../assets/home/desktop/image-web-design-small.jpg);
+        background-image:
+            url(../../assets/home/desktop/image-web-design-large.jpg);
     }
 
-    .app-design {
+    .design-cards>.app-design {
         grid-area: app;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: 
+        background-image:
             url(../../assets/home/desktop/image-app-design.jpg);
     }
 }
@@ -118,28 +167,28 @@
     display: flex;
     color: white;
     overflow: hidden;
-
-    .design-card-overlay{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: $clr-primary-black;
-        opacity: 50%;
-        transition: background-color, ease-in, 250ms;
-    }
-
-    .design-card-overlay:hover{
-        background-color: $clr-primary-peach;
-    }
-
-    .design-card-info{
-        z-index: 5;
-    }
-
-
 }
+
+.design-card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $clr-primary-black;
+    opacity: 50%;
+    transition: background-color, ease-in, 250ms;
+}
+
+.design-card:hover::after{
+    background-color: $clr-primary-peach;
+}
+
+.design-card-info{
+    z-index: 5;
+}
+
 
 @media (min-width: $md) {
     .design-card{
@@ -189,6 +238,7 @@
 @media (min-width: $lg) {
     .skills{
         flex-direction: row;
+        align-items: start;
         justify-content: space-between;
     }
     .skill {
@@ -222,6 +272,7 @@
             max-width: 70%;
         }
     }
+    
 }
 
 
