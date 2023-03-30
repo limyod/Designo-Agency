@@ -1,0 +1,20 @@
+form {
+    --gap: .75rem;
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $clr-primary-white;
+        padding: .75rem 1rem;
+    }
+
+    input:focus {
+        border-bottom: 3px solid white;
+        transition: all 0.1s ease;
+        outline: none
+    }
+
+}
+
+
+

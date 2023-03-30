@@ -1,50 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="../css/main.css">
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
 </head>
 <body>
-  Our Company
-  Locations
-  Contact
-  
-  Award-winning custom designs and digital branding solutions
-
-  With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
-  and engaging brand experiences. Find out more about our services.
-  
-  Learn more
-  
-  Web Design
-  View Projects
-  
-  App Design
-  View Projects
-  
-  Graphic Design
-  View Projects
-  
-  Passionate
-  Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge
-  art, design, and technology into exciting new solutions.
-  
-  Resourceful
-  Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer
-  collaboration. It guarantees superior results that fulfill our clients’ needs.
-  
-  Friendly
-  We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we
-  strive to give them the best experience a company can provide.
-  
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
-  Get in touch
-  
+  <header class="flex align-center space-between">
+    <div class="logo">
+      <a href="./index.html"><img src="../../assets/shared/desktop/logo-dark.png" alt="Designo Logo"/></a>
+    </div>
+    <button hidden class="mobile-nav-toggle"><span class="visually-hidden"
+        aria-expanded="false">Menu</span></button>
+    <nav hidden>
+      <ul class="flex align-center">
+        <li><a>Our Company</a></li>
+        <li><a>Locations</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="flow">
+  <div class="bg-peach text-white grid container hero-phone">
+    <div class="hero-phone-details flow">
+      <h1>Award-winning custom designs and digital branding solutions</h1>
+      <p>
+      With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
+      and engaging brand experiences. Find out more about our services.
+      </p>
+      <button class="light-btn">Learn more</button>
+    </div>
+      <img src="../../assets/home/desktop/image-hero-phone.png">
+  </div>
+  <div class="container grid design-cards design-cards--home">
+    <div class="design-card border-radius web-design">
+      <div class="flow">
+        <h1>Web Design</h1>
+        <p>View Projects</p>
+      </div>
+    </div>
+    <div class="design-card border-radius app-design">
+      <div class="design-card-overlay"></div>
+      <div class="flow design-card-info">
+        <h1>App Design</h1>
+        <p>View Projects</p>
+      </div>
+    </div>
+    <div class="design-card border-radius graphic-design">
+      <div class="flow">
+        <h1>Graphic Design</h1>
+        <p>View Projects</p>
+      </div>
+    </div>
+  </div>
+  <div class="container container--skills">
+    <div class="flex skills">
+      <div class="flex skill align-center">
+        <div class="grey-circle-overlay">
+          <img src="../../assets/home/desktop/illustration-passionate.svg">
+        </div>
+        <div class="skill-info flow">
+          <h2>Passionate</h2>
+          <p>Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We
+            merge
+            art, design, and technology into exciting new solutions.</p>
+        </div>
+      </div>
+      <div class="flex skill align-center">
+        <div class="grey-circle-overlay">
+          <img src="../../assets/home/desktop/illustration-resourceful.svg">
+        </div>
+        <div class="skill-info flow">
+          <h2>Resourceful</h2>
+          <p>Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer
+          collaboration. It guarantees superior results that fulfill our clients’ needs.</p>
+        </div>
+      </div>
+      <div class="flex skill align-center">
+        <div class="grey-circle-overlay">
+          <img src="../../assets/home/desktop/illustration-friendly.svg">
+        </div>
+        <div class="skill-info flow">
+          <h2>Friendly</h2>
+          <p>We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we
+          strive to give them the best experience a company can provide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-radius bg-peach text-white container contact-card flow flex">
+    <div class="flow contact-card-text">
+      <h1>Let’s talk about your project</h1>
+      <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
+    </div>
+    <a href="#" class="btn light-btn">Get in touch</button>
+  </div>
+  </main>
   Our company
   Locations
   Contact

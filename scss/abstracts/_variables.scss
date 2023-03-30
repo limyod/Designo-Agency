@@ -2,7 +2,11 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
+///Screen sizes
+/// 
+$s: 0;
+$md: 768px;
+$lg: 992px;
 
 
 
@@ -38,7 +42,7 @@ $letter-spacing-3: 5px;
 /// @type Color
 $clr-primary-peach: hsl(11 73% 66%);
 $clr-primary-black: hsl(250 3% 11%);
-$clr-primary-white: hsl(0, 0, 100%);
+$clr-primary-white: hsl(0, 0%, 100%);
 
 $clr-secondary-light-peach: hsl(11 100% 80%);
 $clr-secondary-dark-grey: hsl(264 5% 20%);

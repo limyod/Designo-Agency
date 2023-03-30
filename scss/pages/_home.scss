@@ -1,3 +1,227 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+
+.hero-phone{
+    padding-block: 2rem;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 8px;
+    img{
+        width: 100%;
+        margin-top: -10%;
+        margin-bottom: -60%;
+        position: relative;
+    }
+
+    .light-btn{
+        position: relative;
+        z-index: 5;
+    }
+}
+
+@media (min-width: $md) {
+    .hero-phone {
+        width: min(80rem, 90%);
+        padding-top: 3.75rem;
+        img{
+            margin-top: -20%;
+        }
+    }
+}
+
+@media (min-width: $lg) {
+    .hero-phone{
+        text-align: left;
+        grid-template-columns: 1fr 1fr;
+        padding-right: 0;
+        align-items: center;
+        width: min(80rem, 80%);
+
+        img {
+            position: relative;
+        }
+        .hero-phone-details{
+            --flow-space: 2rem;
+            padding-block: clamp(6rem, 30% ,9rem);
+        }
+    }
+}
+
+.design-cards--home {
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+            'web'
+            'app'
+            'graphic';
+}
+
+@media (min-width: $lg) {
+    .design-cards--home {
+        height: 640px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            'web app'
+            'web graphic';
+    }
+}
+
+.design-cards{
+    padding: 0;
+
+    .graphic-design {
+        grid-area: graphic;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: 
+            url(../../assets/home/desktop/image-graphic-design.jpg);
+    }
+
+    .graphic-design {
+        grid-area: graphic;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image:
+            url(../../assets/home/desktop/image-graphic-design.jpg);
+    }
+    
+    .web-design {
+        grid-area: web;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: 
+            url(../../assets/home/desktop/image-web-design-small.jpg);
+    }
+
+    .app-design {
+        grid-area: app;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: 
+            url(../../assets/home/desktop/image-app-design.jpg);
+    }
+}
+
+.design-card {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    text-align: center;
+    display: flex;
+    color: white;
+    overflow: hidden;
+
+    .design-card-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $clr-primary-black;
+        opacity: 50%;
+        transition: background-color, ease-in, 250ms;
+    }
+
+    .design-card-overlay:hover{
+        background-color: $clr-primary-peach;
+    }
+
+    .design-card-info{
+        z-index: 5;
+    }
+
+
+}
+
+@media (min-width: $md) {
+    .design-card{
+        min-height: 200px;
+    }
+}
+
+@media (min-width: $lg) {
+    .app-design {
+        background-image: 
+            url(../../assets/home/desktop/image-web-design-large.jpg);
+    }
+
+}
+
+.container--skills{
+    padding: 0;
+}
+
+.skills{
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .grey-circle-overlay{
+        background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    }
+    img{
+        min-width: 12.5rem;
+    }
+}
+
+@media (min-width: $md) {
+    .skill {
+        --gap: 3rem;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+@media (min-width: $lg) {
+    .skills{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .skill {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.contact-card{
+    padding-block: 4rem;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: $md) {
+    .contact-card{
+        padding-block: 3.5rem;
+    }
+}
+
+@media (min-width: $lg) {
+    .contact-card {
+        padding-block: 7rem;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+
+        .contact-card-text{
+            max-width: 70%;
+        }
+    }
+}
+
+

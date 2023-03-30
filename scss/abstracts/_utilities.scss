@@ -5,10 +5,25 @@
     margin-top: var(--flow-space, 1rem);
 }
 
-.container{
-    padding-inline: 2em;
+.container {
+    width: 90%;
     margin-inline: auto;
-    max-width: 80rem;
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem;
+}
+
+@media (min-width: $md) {
+    .container {
+        padding-inline: 3.625rem;
+        width: min(80rem, 90%);
+    }
+}
+
+@media (min-width: $lg) {
+    .container {
+        width: min(80rem, 80%);
+        padding-inline: 6rem;
+    }
 }
 
 .block{
@@ -31,3 +46,20 @@
     display: grid;
     gap: var(--gap, 1rem);
 }
+
+.border-radius{
+    border-radius: 8px;
+}
+
+.overlap-next-block{
+    margin-bottom: calc(-1 * var(--overlap, 10rem));
+    z-index: 10;
+    position: relative;
+}
+
+.rel{
+    position:relative;
+}
+
+
+

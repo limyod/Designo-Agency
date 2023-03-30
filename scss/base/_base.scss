@@ -21,6 +21,39 @@ html {
   box-sizing: inherit;
 }
 
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul, li{
+  list-style-type: none;
+}
+
 /**
  * Basic styles for links
  */

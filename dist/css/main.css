@@ -4,11 +4,24 @@
 }
 
 .container {
-  padding-inline: 2em;
+  width: 90%;
   margin-inline: auto;
-  max-width: 80rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 3.625rem;
+    width: min(80rem, 90%);
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: min(80rem, 80%);
+    padding-inline: 6rem;
+  }
+}
 .block {
   display: block;
 }
@@ -29,6 +42,20 @@
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
+}
+
+.border-radius {
+  border-radius: 8px;
+}
+
+.overlap-next-block {
+  margin-bottom: calc(-1 * var(--overlap, 10rem));
+  z-index: 10;
+  position: relative;
+}
+
+.rel {
+  position: relative;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -360,6 +387,39 @@ html {
   box-sizing: inherit;
 }
 
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
 /**
  * Basic styles for links
  */
@@ -515,21 +575,6 @@ h3 {
 }
 
 /**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-  max-width: 1180px; /* 1 */
-  margin-left: auto; /* 2 */
-  margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
-  width: 100%; /* 1 */
-}
-
-/**
  * Hide text while making it readable for screen readers
  * 1. Needed in WebKit-based browsers because of an implementation bug;
  *    See: https://code.google.com/p/chromium/issues/detail?id=457146
@@ -557,6 +602,16 @@ h3 {
   width: 1px;
 }
 
+header {
+  padding: 2.25rem 1.5rem;
+}
+
+footer {
+  width: 100%;
+  height: 320px;
+  background-color: hsl(250, 3%, 11%);
+}
+
 button, .btn {
   border: none;
   cursor: pointer;
@@ -581,4 +636,212 @@ button, .btn {
 .light-btn:hover {
   background-color: hsl(11, 100%, 80%);
   color: hsl(0, 0%, 100%);
+}
+
+form {
+  --gap: .75rem;
+}
+form input[type=text], form input[type=email], form input[type=tel] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+  padding: 0.75rem 1rem;
+}
+form input:focus {
+  border-bottom: 3px solid white;
+  transition: all 0.1s ease;
+  outline: none;
+}
+
+.logo img {
+  width: 270px;
+}
+
+.hero-phone {
+  padding-block: 2rem;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+}
+.hero-phone img {
+  width: 100%;
+  margin-top: -10%;
+  margin-bottom: -60%;
+  position: relative;
+}
+.hero-phone .light-btn {
+  position: relative;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .hero-phone {
+    width: min(80rem, 90%);
+    padding-top: 3.75rem;
+  }
+  .hero-phone img {
+    margin-top: -20%;
+  }
+}
+@media (min-width: 992px) {
+  .hero-phone {
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 0;
+    align-items: center;
+    width: min(80rem, 80%);
+  }
+  .hero-phone img {
+    position: relative;
+  }
+  .hero-phone .hero-phone-details {
+    --flow-space: 2rem;
+    padding-block: clamp(6rem, 30%, 9rem);
+  }
+}
+.design-cards--home {
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "web" "app" "graphic";
+}
+
+@media (min-width: 992px) {
+  .design-cards--home {
+    height: 640px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "web app" "web graphic";
+  }
+}
+.design-cards {
+  padding: 0;
+}
+.design-cards .graphic-design {
+  grid-area: graphic;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../assets/home/desktop/image-graphic-design.jpg);
+}
+.design-cards .graphic-design {
+  grid-area: graphic;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../assets/home/desktop/image-graphic-design.jpg);
+}
+.design-cards .web-design {
+  grid-area: web;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../assets/home/desktop/image-web-design-small.jpg);
+}
+.design-cards .app-design {
+  grid-area: app;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../assets/home/desktop/image-app-design.jpg);
+}
+
+.design-card {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  text-align: center;
+  display: flex;
+  color: white;
+  overflow: hidden;
+}
+.design-card .design-card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsl(250, 3%, 11%);
+  opacity: 50%;
+  transition: background-color, ease-in, 250ms;
+}
+.design-card .design-card-overlay:hover {
+  background-color: hsl(11, 73%, 66%);
+}
+.design-card .design-card-info {
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .design-card {
+    min-height: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .app-design {
+    background-image: url(../../assets/home/desktop/image-web-design-large.jpg);
+  }
+}
+.container--skills {
+  padding: 0;
+}
+
+.skills {
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.skill .grey-circle-overlay {
+  background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+}
+.skill img {
+  min-width: 12.5rem;
+}
+
+@media (min-width: 768px) {
+  .skill {
+    --gap: 3rem;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .skills {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .skill {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.contact-card {
+  padding-block: 4rem;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contact-card {
+    padding-block: 3.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .contact-card {
+    padding-block: 7rem;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .contact-card .contact-card-text {
+    max-width: 70%;
+  }
 }/*# sourceMappingURL=main.css.map */
