@@ -7,6 +7,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="../css/main.css">
+  <script src="../scripts/headerNavigation.js" defer></script>
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
 </head>
 <body>
@@ -16,15 +17,15 @@
     </div>
     <button class="mobile-nav-toggle"><span class="visually-hidden"
         aria-expanded="false">Menu</span></button>
-    <nav hidden>
-      <ul class="primary-navigation flex align-center nav-links">
-        <li><a>Our Company</a></li>
-        <li><a>Locations</a></li>
-        <li><a>Contact</a></li>
+    <nav>
+      <ul class="primary-navigation flex align-center nav-links" data-visible="false">
+        <li><a href="#">Our Company</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="flow">
+  <main class="flow--main">
     <div class="bg-peach text-white grid container hero-phone">
     <div class="hero-phone-details flow">
       <h1>Award-winning custom designs and digital branding solutions</h1>
@@ -37,24 +38,24 @@
       <img src="../../assets/home/desktop/image-hero-phone.png">
     </div>
     <div class="container grid design-cards design-cards--home">
-      <div class="design-card border-radius web-design">
+      <a href="" class="design-card border-radius web-design block">
         <div class="flow design-card-info">
           <h1>Web Design</h1>
           <p>View Projects</p>
         </div>
-      </div>
-      <div class="design-card border-radius app-design">
+      </a>
+      <a href="" class="design-card border-radius app-design block">
         <div class="flow design-card-info">
           <h1>App Design</h1>
           <p>View Projects</p>
         </div>
-      </div>
-      <div class="design-card border-radius graphic-design">
+      </a>
+      <a href="" class="design-card border-radius graphic-design block">
         <div class="flow design-card-info">
           <h1>Graphic Design</h1>
           <p>View Projects</p>
         </div>
-      </div>
+      </a>
     </div>
     <div class="container container--skills">
     <div class="flex skills">
@@ -125,11 +126,11 @@
           <p class="fw-700">M : contact@designo.com</p>
         </div>
         <ul class="flex icon-list">
-          <li><img src="../../assets/shared/desktop/icon-facebook.svg" alt="icon-facebook"></li>
-          <li><img src="../../assets/shared/desktop/icon-youtube.svg" alt="icon-youtube"></li>
-          <li><img src="../../assets/shared/desktop/icon-twitter.svg" alt="icon-twitter"></li>
-          <li><img src="../../assets/shared/desktop/icon-pinterest.svg" alt="icon-pinterest"></li>
-          <li><img src="../../assets/shared/desktop/icon-instagram.svg" alt="icon-instagram"></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-facebook.svg" alt="icon-facebook"></a></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-youtube.svg" alt="icon-youtube"></a></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-twitter.svg" alt="icon-twitter"></a></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-pinterest.svg" alt="icon-pinterest"></a></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-instagram.svg" alt="icon-instagram"></a></li>
         </ul>
       </div>
     </div>

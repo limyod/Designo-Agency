@@ -616,10 +616,20 @@ h3 {
 
 .primary-header {
   padding: 2.25rem 0;
+  height: 7rem;
 }
 
 .primary-header > nav {
   position: relative;
+  --gap: clamp(.75rem, 15vw - 5rem ,4rem);
+}
+
+header .nav-links a:hover {
+  border-bottom: 1px solid hsl(250, 3%, 11%);
+}
+
+.mobile-nav-toggle {
+  display: none;
 }
 
 @media (max-width: 576px) {
@@ -630,10 +640,47 @@ h3 {
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
     flex-direction: column;
+    align-items: left;
+    --gap: 3rem;
     background-color: hsl(0, 0%, 100%);
     box-shadow: -1px -2px 4px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -1px -2px 4px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -1px -2px 4px 0px rgba(0, 0, 0, 0.75);
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+  }
+  .primary-navigation[data-visible=true] {
+    transform: translateX(0);
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 2rem;
+    background: transparent;
+    background-image: url(../../assets/shared/mobile/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+  }
+  .mobile-nav-toggle[aria-expanded=true] {
+    background-image: url(../../assets/shared/mobile/icon-close.svg);
+  }
+}
+.flow--main > *:where(:not(:first-child)) {
+  margin-top: 6rem;
+}
+
+@media (min-width: 768px) {
+  .flow--main > *:where(:not(:first-child)) {
+    margin-top: 7.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .flow--main > *:where(:not(:first-child)) {
+    margin-top: 10rem;
   }
 }
 footer {
@@ -648,6 +695,9 @@ footer .container {
 footer .nav-links {
   flex-direction: column;
 }
+footer .nav-links a:hover {
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+}
 footer .upper-footer {
   flex-direction: column;
   align-items: center;
@@ -658,6 +708,9 @@ footer .bottom-footer {
   text-align: center;
   flex-direction: column;
   align-items: center;
+}
+footer .icon-list img:hover {
+  opacity: 50%;
 }
 
 @media (min-width: 768px) {
@@ -730,10 +783,11 @@ form input:focus {
 }
 
 .logo img {
-  width: 270px;
+  max-height: 1.625rem;
 }
 
 .hero-phone {
+  position: relative;
   padding-block: 2rem;
   text-align: center;
   overflow: hidden;
@@ -751,6 +805,33 @@ form input:focus {
   z-index: 5;
 }
 
+.hero-phone * {
+  z-index: 5;
+}
+
+.hero-phone::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../../assets/shared/desktop/bg-pattern-small-circle.svg);
+  background-size: 640px auto;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .hero-phone::after {
+    background-position: 200% center;
+  }
+}
+@media (min-width: 992px) {
+  .hero-phone::after {
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+}
 @media (min-width: 768px) {
   .hero-phone {
     width: min(80rem, 90%);
@@ -793,7 +874,7 @@ form input:focus {
   padding: 0;
 }
 
-.design-cards > .graphic-design {
+.design-cards .graphic-design {
   grid-area: graphic;
   background-repeat: no-repeat;
   background-position: center;
@@ -801,7 +882,7 @@ form input:focus {
   background-image: url(../../assets/home/mobile/image-graphic-design.jpg);
 }
 
-.design-cards > .web-design {
+.design-cards .web-design {
   grid-area: web;
   background-repeat: no-repeat;
   background-position: center;
@@ -809,7 +890,7 @@ form input:focus {
   background-image: url(../../assets/home/mobile/image-web-design.jpg);
 }
 
-.design-cards > .app-design {
+.design-cards .app-design {
   grid-area: app;
   background-repeat: no-repeat;
   background-position: center;
@@ -818,21 +899,21 @@ form input:focus {
 }
 
 @media (min-width: 768px) {
-  .design-cards > .graphic-design {
+  .design-cards .graphic-design {
     grid-area: graphic;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url(../../assets/home/tablet/image-graphic-design.jpg);
   }
-  .design-cards > .web-design {
+  .design-cards .web-design {
     grid-area: web;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url(../../assets/home/tablet/image-web-design-small.jpg);
   }
-  .design-cards > .app-design {
+  .design-cards .app-design {
     grid-area: app;
     background-repeat: no-repeat;
     background-position: center;
@@ -841,21 +922,21 @@ form input:focus {
   }
 }
 @media (min-width: 768px) {
-  .design-cards > .graphic-design {
+  .design-cards .graphic-design {
     grid-area: graphic;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url(../../assets/home/desktop/image-graphic-design.jpg);
   }
-  .design-cards > .web-design {
+  .design-cards .web-design {
     grid-area: web;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url(../../assets/home/desktop/image-web-design-large.jpg);
   }
-  .design-cards > .app-design {
+  .design-cards .app-design {
     grid-area: app;
     background-repeat: no-repeat;
     background-position: center;
@@ -946,10 +1027,28 @@ form input:focus {
   }
 }
 .contact-card {
+  position: relative;
   padding-block: 4rem;
   text-align: center;
   align-items: center;
   flex-direction: column;
+}
+
+.contact-card * {
+  position: relative;
+  z-index: 5;
+}
+
+.contact-card::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-image: url(../../assets/shared/desktop/bg-pattern-call-to-action.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
 }
 
 @media (min-width: 768px) {

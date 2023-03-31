@@ -1,0 +1,15 @@
+.flow--main>*:where(:not(:first-child)) {
+    margin-top: 6rem;
+}
+
+@media (min-width: $md) {
+    .flow--main>*:where(:not(:first-child)) {
+        margin-top: 7.5rem;
+    }
+}
+
+@media (min-width: $lg) {
+    .flow--main>*:where(:not(:first-child)) {
+        margin-top: 10rem;
+    }
+}

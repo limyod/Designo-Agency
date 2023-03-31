@@ -16,6 +16,10 @@ footer{
         flex-direction: column;
     }
 
+    .nav-links a:hover{
+        border-bottom: 1px solid $clr-primary-white;
+    }
+
     .upper-footer{
         flex-direction: column;
         align-items: center;
@@ -27,6 +31,10 @@ footer{
         text-align: center;
         flex-direction: column;
         align-items: center;
+    }
+
+    .icon-list img:hover{
+        opacity: 50%;
     }
 
 }

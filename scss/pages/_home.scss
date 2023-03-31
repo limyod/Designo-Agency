@@ -2,8 +2,8 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-
 .hero-phone{
+    position: relative;
     padding-block: 2rem;
     text-align: center;
     overflow: hidden;
@@ -19,6 +19,33 @@
     .light-btn{
         position: relative;
         z-index: 5;
+    }
+}
+.hero-phone *{
+    z-index: 5;
+}
+.hero-phone::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../../assets/shared/desktop/bg-pattern-small-circle.svg);
+    background-size: 640px auto;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: $md) {
+    .hero-phone::after {
+        background-position: 200% center;
+    }
+}
+
+@media (min-width: $lg) {
+    .hero-phone::after {
+        background-position: right center;
+        background-repeat: no-repeat;
     }
 }
 
@@ -73,7 +100,7 @@
     padding: 0;
 }
 
-.design-cards > .graphic-design {
+.design-cards .graphic-design {
     grid-area: graphic;
     background-repeat: no-repeat;
     background-position: center;
@@ -82,7 +109,7 @@
         url(../../assets/home/mobile/image-graphic-design.jpg);
 }
 
-.design-cards > .web-design {
+.design-cards .web-design {
     grid-area: web;
     background-repeat: no-repeat;
     background-position: center;
@@ -91,7 +118,7 @@
         url(../../assets/home/mobile/image-web-design.jpg);
 }
 
-.design-cards > .app-design {
+.design-cards .app-design {
     grid-area: app;
     background-repeat: no-repeat;
     background-position: center;
@@ -101,7 +128,7 @@
 }
 
 @media (min-width: $md) {
-    .design-cards>.graphic-design {
+    .design-cards .graphic-design {
         grid-area: graphic;
         background-repeat: no-repeat;
         background-position: center;
@@ -110,7 +137,7 @@
             url(../../assets/home/tablet/image-graphic-design.jpg);
     }
 
-    .design-cards>.web-design {
+    .design-cards .web-design {
         grid-area: web;
         background-repeat: no-repeat;
         background-position: center;
@@ -119,7 +146,7 @@
             url(../../assets/home/tablet/image-web-design-small.jpg);
     }
 
-    .design-cards>.app-design {
+    .design-cards .app-design {
         grid-area: app;
         background-repeat: no-repeat;
         background-position: center;
@@ -130,7 +157,7 @@
 }
 
 @media (min-width: $md) {
-    .design-cards>.graphic-design {
+    .design-cards .graphic-design {
         grid-area: graphic;
         background-repeat: no-repeat;
         background-position: center;
@@ -139,7 +166,7 @@
             url(../../assets/home/desktop/image-graphic-design.jpg);
     }
 
-    .design-cards>.web-design {
+    .design-cards .web-design {
         grid-area: web;
         background-repeat: no-repeat;
         background-position: center;
@@ -148,7 +175,7 @@
             url(../../assets/home/desktop/image-web-design-large.jpg);
     }
 
-    .design-cards>.app-design {
+    .design-cards .app-design {
         grid-area: app;
         background-repeat: no-repeat;
         background-position: center;
@@ -249,10 +276,28 @@
 }
 
 .contact-card{
+    position: relative;
     padding-block: 4rem;
     text-align: center;
     align-items: center;
     flex-direction: column;
+}
+
+.contact-card *{
+    position: relative;
+    z-index: 5;
+}
+
+.contact-card::after{
+    position:absolute;
+    content:'';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-image: url(../../assets/shared/desktop/bg-pattern-call-to-action.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
 }
 
 @media (min-width: $md) {
