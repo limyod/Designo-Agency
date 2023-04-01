@@ -6,7 +6,7 @@
 }
 
 .container {
-    width: 90%;
+    width: var(--container-mobile-width, 90%);
     margin-inline: auto;
     padding-inline: 1.5rem;
     padding-block: 1.5rem;
@@ -48,7 +48,7 @@
 }
 
 .border-radius{
-    border-radius: 8px;
+    border-radius: $border-radius-1;
 }
 
 .overlap-footer{

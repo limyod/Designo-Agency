@@ -1,0 +1,25 @@
+.multiple-ball-overlay{
+    position: relative;
+}
+
+.multiple-ball-overlay * {
+    position: relative;
+    z-index: 5;
+}
+
+.multiple-ball-overlay::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-image: url(../../assets/shared/desktop/bg-pattern-call-to-action.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.grey-circle-overlay {
+    background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-size: contain;
+}

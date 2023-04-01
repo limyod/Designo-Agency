@@ -5,7 +5,8 @@
   'abstracts/variables',
   'abstracts/functions',
   'abstracts/mixins',
-  'abstracts/utilities';
+  'abstracts/utilities',
+  'abstracts/overlays';
 
 // 2. Vendors
 @import
@@ -27,9 +28,17 @@
 @import
   'components/button',
   'components/form',
-  'components/logo';
+  'components/designCards',
+  'components/contactCard',
+  'components/projectCards',
+  'components/logo',
+  'components/miniLocation',
+  'components/hero';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/about',
+  'pages/contact',
+  'pages/locations';
 

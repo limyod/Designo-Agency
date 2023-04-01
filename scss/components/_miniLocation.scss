@@ -1,0 +1,22 @@
+.mini-locations{
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: $md) {
+    .mini-locations {
+        --gap: 2rem;
+    }
+}
+
+@media (min-width: $md) {
+    .mini-locations {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.mini-location{
+    flex-direction: column;
+}

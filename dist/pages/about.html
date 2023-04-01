@@ -1,66 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Designo Agency Website Challenge</title>
-</head>
-<body>
-  Our Company
-  Locations
-  Contact
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../scripts/headerNavigation.js" defer></script>
+    <title>Frontend Mentor | Designo Agency Website Challenge</title>
+  </head>
 
-  About us
-  Founded in 2010, we are a creative agency that produces lasting results for our clients. 
-  We’ve partnered with many startups, corporations, and nonprofits alike to craft designs 
-  that make real impact. We’re always looking forward to creating brands, products, and 
-  digital experiences that connect with our clients' audiences.
+  <body>
+    <header class="primary-header container flex align-center space-between">
+      <div class="logo">
+        <a href="./index.html"
+          ><img
+            src="../../assets/shared/desktop/logo-dark.png"
+            alt="Designo Logo logo dark"
+        /></a>
+      </div>
+      <button class="mobile-nav-toggle">
+        <span class="visually-hidden" aria-expanded="false">Menu</span>
+      </button>
+      <nav>
+        <ul
+          class="primary-navigation flex align-center nav-links"
+          data-visible="false"
+        >
+          <li><a href="#">Our Company</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flow--main">
+      <div
+        class="bg-peach container hero hero--about text-white multiple-ball-overlay"
+      >
+        <picture>
+          <source
+            media="(min-width: 992px)"
+            srcset="../../assets/about/desktop/image-about-hero.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="../../assets/about/tablet/image-about-hero.jpg"
+          />
+          <img
+            src="../../assets/about/mobile/image-about-hero.jpg"
+            alt="about-hero"
+          />
+        </picture>
+        <div class="flow hero--about-text">
+          <h1>About us</h1>
+          <p>
+            Founded in 2010, we are a creative agency that produces lasting
+            results for our clients. We’ve partnered with many startups,
+            corporations, and nonprofits alike to craft designs that make real
+            impact. We’re always looking forward to creating brands, products,
+            and digital experiences that connect with our clients' audiences.
+          </p>
+        </div>
+      </div>
+      <div
+        class="bg-light-grey container hero hero--about multiple-ball-overlay"
+      >
+        <picture>
+          <source
+            media="(min-width: 992px)"
+            srcset="../../assets/about/desktop/image-world-class-talent.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="../../assets/about/tablet/image-world-class-talent.jpg"
+          />
+          <img
+            src="../../assets/about/mobile/image-world-class-talent.jpg"
+            alt="world-class-talent"
+          />
+        </picture>
+        <div class="flow hero--about-text">
+          <h1 class="text-peach">World-class talent</h1>
+          <p>
+            We are a crew of strategists, problem-solvers, and technologists.
+            Every design is thoughtfully crafted from concept to launch,
+            ensuring success in its given market. We are constantly updating our
+            skills in a myriad of platforms.
+          </p>
+          <p>
+            Our team is multi-disciplinary and we are not merely interested in
+            form — content and meaning are just as important. We give great
+            importance to craftsmanship, service, and prompt delivery. Clients
+            have always been impressed with our high-quality outcomes that
+            encapsulates their brand’s story and mission.
+          </p>
+        </div>
+      </div>
+      <div class="container flex mini-locations">
+        <div class="flex mini-location align-center">
+          <div class="grey-circle-overlay">
+            <img src="../../assets/shared/desktop/illustration-canada.svg" />
+          </div>
+          <h2>Canada</h2>
+          <a class="btn dark-btn uppercase" href="">See Location</a>
+        </div>
+        <div class="flex mini-location align-center">
+          <div class="grey-circle-overlay">
+            <img src="../../assets/shared/desktop/illustration-australia.svg" />
+          </div>
+          <h2>Australia</h2>
+          <a class="btn dark-btn uppercase" href="">See Location</a>
+        </div>
+        <div class="flex mini-location align-center">
+          <div class="grey-circle-overlay">
+            <img
+              src="../../assets/shared/desktop/illustration-united-kingdom.svg"
+            />
+          </div>
+          <h2>United Kingdom</h2>
+          <a class="btn dark-btn uppercase" href="">See Location</a>
+        </div>
+      </div>
+      <div
+        class="bg-light-grey container hero hero--about multiple-ball-overlay"
+      >
+        <picture>
+          <source
+            media="(min-width: 992px)"
+            srcset="../../assets/about/desktop/image-real-deal.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="../../assets/about/tablet/image-real-deal.jpg"
+          />
+          <img
+            src="../../assets/about/mobile/image-real-deal.jpg"
+            alt="real-deal"
+          />
+        </picture>
+        <div class="flow hero--about-text">
+          <h1 class="text-peach">The real deal</h1>
+          <p>
+            As strategic partners in our clients’ businesses, we are ready to
+            take on any challenge as our own. Solving real problems require
+            empathy and collaboration, and we strive to bring a fresh
+            perspective to every opportunity. We make design and technology more
+            accessible and give you tools to measure success.
+          </p>
+          <p>
+            We are visual storytellers in appealing and captivating ways. By
+            combining business and marketing strategies, we inspire audiences to
+            take action and drive real results.
+          </p>
+        </div>
+      </div>
 
-  World-class talent
-  We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully 
-  crafted from concept to launch, ensuring success in its given market. We are constantly updating 
-  our skills in a myriad of platforms.
-
-  Our team is multi-disciplinary and we are not merely interested in form — content and meaning 
-  are just as important. We give great importance to craftsmanship, service, and prompt delivery. 
-  Clients have always been impressed with our high-quality outcomes that encapsulates their 
-  brand’s story and mission.
-
-  The real deal
-  As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own.
-  Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every
-  opportunity. We make design and technology more accessible and give you tools to measure success.
-
-  We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, 
-  we inspire audiences to take action and drive real results.
-
-  Canada
-  See location
-
-  Australia
-  See location
-
-  United Kingdom
-  See location
-
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can 
-  help your business grow.
-  Get in touch
-
-  Our company
-  Locations
-  Contact
-
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
-</body>
+      <div
+        class="overlap-footer border-radius bg-peach text-white container contact-card flow flex multiple-ball-overlay"
+      >
+        <div class="flow contact-card-text">
+          <h1>Let’s talk about your project</h1>
+          <p>
+            Ready to take it to the next level? Contact us today and find out
+            how our expertise can help your business grow.
+          </p>
+        </div>
+        <a href="#" class="btn light-btn">Get in touch</a>
+      </div>
+    </main>
+    <footer class="bg-black text-white">
+      <div class="container flow">
+        <div class="upper-footer flex">
+          <div class="logo">
+            <a href="./index.html"
+              ><img
+                src="../../assets/shared/desktop/logo-light.png"
+                alt="Designo Logo light"
+            /></a>
+          </div>
+          <nav>
+            <ul class="flex align-center text-white nav-links uppercase">
+              <li><a href="#">Our Company</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex bottom-footer">
+          <div class="text-half-white flow">
+            <p class="fw-700">Designo Central Office</p>
+            <p>3886 Wellington Street</p>
+            <p>Toronto, Ontario M9C 3J5</p>
+          </div>
+          <div class="text-half-white flow">
+            <p class="fw-700">Contact Us (Central Office)</p>
+            <p class="fw-700">P : +1 253-863-8967</p>
+            <p class="fw-700">M : contact@designo.com</p>
+          </div>
+          <ul class="flex icon-list">
+            <li>
+              <a href="#"
+                ><img
+                  src="../../assets/shared/desktop/icon-facebook.svg"
+                  alt="icon-facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="../../assets/shared/desktop/icon-youtube.svg"
+                  alt="icon-youtube"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="../../assets/shared/desktop/icon-twitter.svg"
+                  alt="icon-twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="../../assets/shared/desktop/icon-pinterest.svg"
+                  alt="icon-pinterest"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="../../assets/shared/desktop/icon-instagram.svg"
+                  alt="icon-instagram"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

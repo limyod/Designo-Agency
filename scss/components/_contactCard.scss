@@ -1,0 +1,27 @@
+.contact-card {
+    position: relative;
+    padding-block: 4rem;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: $md) {
+    .contact-card {
+        padding-block: 3.5rem;
+    }
+}
+
+@media (min-width: $lg) {
+    .contact-card {
+        padding-block: 7rem;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+
+        .contact-card-text {
+            max-width: 70%;
+        }
+    }
+
+}

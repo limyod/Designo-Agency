@@ -1,0 +1,30 @@
+.hero {
+    --flow-gap: 1.5rem;
+    --container-mobile-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: .5rem;
+    padding-block: 4rem;
+    text-align: center;
+}
+
+.hero p, .hero h1{
+    max-width: 22rem;
+}
+
+@media (min-width: $md) {
+    .hero {
+        border-radius: $border-radius-1;
+        padding-block: 3.5rem;
+        height: 252;
+    }
+}
+
+@media (min-width: $lg) {
+    .hero {
+        padding-block: 7rem;
+    }
+
+}
