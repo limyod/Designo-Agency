@@ -10,63 +10,58 @@
   <script src="../scripts/headerNavigation.js" defer></script>
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
 </head>
-
 <body>
   <header class="primary-header container flex align-center space-between">
     <div class="logo">
-      <a href="./index.html"><img src="../../assets/shared/desktop/logo-dark.png" alt="Designo Logo logo dark" /></a>
+      <a href="./index.html"><img src="../../assets/shared/desktop/logo-dark.png" alt="Designo Logo logo dark"/></a>
     </div>
-    <button class="mobile-nav-toggle"><span class="visually-hidden" aria-expanded="false">Menu</span></button>
+    <button class="mobile-nav-toggle"><span class="visually-hidden"
+        aria-expanded="false">Menu</span></button>
     <nav>
       <ul class="primary-navigation flex align-center nav-links" data-visible="false">
-        <li><a href="#">Our Company</a></li>
-        <li><a href="#">Locations</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="./about.html">Our Company</a></li>
+        <li><a href="./locations.html">Locations</a></li>
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main class="flow--main">
-    <div class="container hero--contact bg-peach text-white">
-      <div>
+    <div class="container hero--contact bg-peach text-white grey-circle-overlay">
+      <div class="hero--contact-text flow">
         <h1>Contact us</h1>
         <p>Ready to take it to the next level? Let’s talk about your project or idea and find out how 
   we can help your business grow. If you are looking for unique digital experiences that’s 
   relatable to your users, drop us a line.</p>
       </div>
-      <form class="grid">
-        <div class="flow">
-          <input class="block" type="text" placeholder="empty form">
-          <input class="block" type="text" value="filled form" placeholder="empty form">
-          <input class="block" type="text" placeholder="error_state form">
-          <button class="btn light-btn">submit</button>
-        </div>
+      <form class="flow">
+        <label class="visually-hidden" for="name">name</label>
+        <input id="name" class="block" type="text" placeholder="name">
+        <label class="visually-hidden" for="email">email</label>
+        <input id="email" class="block" type="email" placeholder="email">
+        <label class="visually-hidden" for="phone">phone</label>
+        <input id="phone" class="block" type="tel" placeholder="phone number">
+        <label class="visually-hidden" for="message">message</label>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="message"></textarea>
+        <button class="btn light-btn">Submit</button>
       </form>
     </div>
-
-
-
-  Name
-  Email address
-  Phone
-  Your message
-  Submit
     <div class="container flex mini-locations">
       <div class="flex mini-location align-center">
-        <div class="grey-circle-overlay">
+        <div class="grey-circle-background">
           <img src="../../assets/shared/desktop/illustration-canada.svg" />
         </div>
         <h2>Canada</h2>
         <a class="btn dark-btn uppercase" href="">See Location</a>
       </div>
       <div class="flex mini-location align-center">
-        <div class="grey-circle-overlay">
+        <div class="grey-circle-background">
           <img src="../../assets/shared/desktop/illustration-australia.svg" />
         </div>
         <h2>Australia</h2>
         <a class="btn dark-btn uppercase" href="">See Location</a>
       </div>
       <div class="flex mini-location align-center">
-        <div class="grey-circle-overlay">
+        <div class="grey-circle-background">
           <img
             src="../../assets/shared/desktop/illustration-united-kingdom.svg"
           />
@@ -84,9 +79,9 @@
         </div>
         <nav>
           <ul class="flex align-center text-white nav-links uppercase">
-            <li><a href="#">Our Company</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./about.html">Our Company</a></li>
+            <li><a href="./locations.html">Locations</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>

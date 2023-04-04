@@ -85,11 +85,57 @@
   background-position: center right;
 }
 
-.grey-circle-overlay {
+.grey-circle-background {
   background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
   background-size: contain;
 }
 
+.grey-circle-overlay {
+  position: relative;
+}
+
+.grey-circle-overlay * {
+  position: relative;
+  z-index: 5;
+}
+
+.grey-circle-overlay::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: bottom right;
+}
+
+@media (min-width: 768px) {
+  .grey-circle-overlay::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: -30% -30%;
+  }
+}
+@media (min-width: 992px) {
+  .grey-circle-overlay::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: bottom left;
+  }
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -796,13 +842,23 @@ button, .btn {
 form {
   --gap: .75rem;
 }
-form input[type=text], form input[type=email], form input[type=tel] {
+form input[type=text], form input[type=email], form input[type=tel], form textarea {
+  width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid hsl(0, 0%, 100%);
+  border-bottom: 2px solid hsl(0, 0%, 100%);
   padding: 0.75rem 1rem;
+  color: hsl(0, 0%, 100%);
 }
-form input:focus {
+form input[type=text]::-moz-placeholder, form input[type=email]::-moz-placeholder, form input[type=tel]::-moz-placeholder, form textarea::-moz-placeholder {
+  color: hsl(0, 0%, 100%);
+  opacity: 50%;
+}
+form input[type=text]::placeholder, form input[type=email]::placeholder, form input[type=tel]::placeholder, form textarea::placeholder {
+  color: hsl(0, 0%, 100%);
+  opacity: 50%;
+}
+form input:focus, form textarea:focus {
   border-bottom: 3px solid white;
   transition: all 0.1s ease;
   outline: none;
@@ -1192,9 +1248,30 @@ form input:focus {
   }
 }
 .hero--contact {
-  --container-mobile-width: 0;
+  --container-mobile-width: 100%;
+  padding-block: 4rem;
 }
 
+@media (min-width: 768px) {
+  .hero--contact {
+    border-radius: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .hero--contact {
+    display: flex;
+    align-items: center;
+  }
+  .hero--contact-text {
+    flex: 1 0 15rem;
+  }
+  form {
+    flex: 2 1 0;
+  }
+  form button {
+    float: right;
+  }
+}
 .locations {
   --container-mobile-width: 100%;
   text-align: center;

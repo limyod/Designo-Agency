@@ -19,7 +19,57 @@
     background-position: center right;
 }
 
-.grey-circle-overlay {
+.grey-circle-background {
     background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
     background-size: contain;
+}
+
+
+.grey-circle-overlay {
+    position: relative;
+}
+
+.grey-circle-overlay * {
+    position: relative;
+    z-index: 5;
+}
+
+.grey-circle-overlay::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: bottom right;
+}
+
+
+@media (min-width: $md) {
+    .grey-circle-overlay::after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: -30% -30%;
+    }
+}
+
+@media (min-width: $lg) {
+    .grey-circle-overlay::after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: bottom left;
+    }
 }

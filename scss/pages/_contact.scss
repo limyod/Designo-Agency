@@ -1,3 +1,29 @@
 .hero--contact{
-    --container-mobile-width: 0;
+    --container-mobile-width: 100%;
+    padding-block: 4rem;
 }
+
+@media (min-width: $md) {
+    .hero--contact{
+        border-radius: $border-radius-1;
+    }
+}
+
+@media (min-width: $lg) {
+    .hero--contact {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero--contact-text {
+        flex: 1 0 15rem;
+    }
+    form {
+        flex: 2 1 0;
+        button{
+            float: right;
+        }
+    }
+
+}
+

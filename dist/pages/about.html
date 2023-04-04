@@ -1,46 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="../css/main.css" />
-    <script src="../scripts/headerNavigation.js" defer></script>
-    <title>Frontend Mentor | Designo Agency Website Challenge</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <header class="primary-header container flex align-center space-between">
-      <div class="logo">
-        <a href="./index.html"
-          ><img
-            src="../../assets/shared/desktop/logo-dark.png"
-            alt="Designo Logo logo dark"
-        /></a>
-      </div>
-      <button class="mobile-nav-toggle">
-        <span class="visually-hidden" aria-expanded="false">Menu</span>
-      </button>
-      <nav>
-        <ul
-          class="primary-navigation flex align-center nav-links"
-          data-visible="false"
-        >
-          <li><a href="#">Our Company</a></li>
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../scripts/headerNavigation.js" defer></script>
+  <title>Frontend Mentor | Designo Agency Website Challenge</title>
+</head>
+<body>
+  <header class="primary-header container flex align-center space-between">
+    <div class="logo">
+      <a href="./index.html"><img src="../../assets/shared/desktop/logo-dark.png" alt="Designo Logo logo dark"/></a>
+    </div>
+    <button class="mobile-nav-toggle"><span class="visually-hidden"
+        aria-expanded="false">Menu</span></button>
+    <nav>
+      <ul class="primary-navigation flex align-center nav-links" data-visible="false">
+        <li><a href="./about.html">Our Company</a></li>
+        <li><a href="./locations.html">Locations</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
     <main class="flow--main">
       <div
-        class="bg-peach container hero hero--about text-white multiple-ball-overlay"
+        class="bg-peach container hero hero--about text-white grey-circle-overlay"
       >
         <picture>
           <source
@@ -68,7 +55,7 @@
         </div>
       </div>
       <div
-        class="bg-light-grey container hero hero--about multiple-ball-overlay"
+        class="bg-light-grey container hero hero--about"
       >
         <picture>
           <source
@@ -103,21 +90,21 @@
       </div>
       <div class="container flex mini-locations">
         <div class="flex mini-location align-center">
-          <div class="grey-circle-overlay">
+          <div class="grey-circle-background">
             <img src="../../assets/shared/desktop/illustration-canada.svg" />
           </div>
           <h2>Canada</h2>
           <a class="btn dark-btn uppercase" href="">See Location</a>
         </div>
         <div class="flex mini-location align-center">
-          <div class="grey-circle-overlay">
+          <div class="grey-circle-background">
             <img src="../../assets/shared/desktop/illustration-australia.svg" />
           </div>
           <h2>Australia</h2>
           <a class="btn dark-btn uppercase" href="">See Location</a>
         </div>
         <div class="flex mini-location align-center">
-          <div class="grey-circle-overlay">
+          <div class="grey-circle-background">
             <img
               src="../../assets/shared/desktop/illustration-united-kingdom.svg"
             />
@@ -127,7 +114,7 @@
         </div>
       </div>
       <div
-        class="bg-light-grey container hero hero--about multiple-ball-overlay"
+        class="bg-light-grey container hero hero--about"
       >
         <picture>
           <source
@@ -170,77 +157,43 @@
             how our expertise can help your business grow.
           </p>
         </div>
-        <a href="#" class="btn light-btn">Get in touch</a>
+        <a href="./contact.html" class="btn light-btn">Get in touch</a>
       </div>
     </main>
-    <footer class="bg-black text-white">
-      <div class="container flow">
-        <div class="upper-footer flex">
-          <div class="logo">
-            <a href="./index.html"
-              ><img
-                src="../../assets/shared/desktop/logo-light.png"
-                alt="Designo Logo light"
-            /></a>
-          </div>
-          <nav>
-            <ul class="flex align-center text-white nav-links uppercase">
-              <li><a href="#">Our Company</a></li>
-              <li><a href="#">Locations</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+  <footer class="bg-black text-white">
+    <div class="container flow">
+      <div class="upper-footer flex">
+        <div class="logo">
+          <a href="./index.html"><img src="../../assets/shared/desktop/logo-light.png" alt="Designo Logo light" /></a>
         </div>
-        <div class="flex bottom-footer">
-          <div class="text-half-white flow">
-            <p class="fw-700">Designo Central Office</p>
-            <p>3886 Wellington Street</p>
-            <p>Toronto, Ontario M9C 3J5</p>
-          </div>
-          <div class="text-half-white flow">
-            <p class="fw-700">Contact Us (Central Office)</p>
-            <p class="fw-700">P : +1 253-863-8967</p>
-            <p class="fw-700">M : contact@designo.com</p>
-          </div>
-          <ul class="flex icon-list">
-            <li>
-              <a href="#"
-                ><img
-                  src="../../assets/shared/desktop/icon-facebook.svg"
-                  alt="icon-facebook"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="../../assets/shared/desktop/icon-youtube.svg"
-                  alt="icon-youtube"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="../../assets/shared/desktop/icon-twitter.svg"
-                  alt="icon-twitter"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="../../assets/shared/desktop/icon-pinterest.svg"
-                  alt="icon-pinterest"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="../../assets/shared/desktop/icon-instagram.svg"
-                  alt="icon-instagram"
-              /></a>
-            </li>
+        <nav>
+          <ul class="flex align-center text-white nav-links uppercase">
+            <li><a href="./about.html">Our Company</a></li>
+            <li><a href="./locations.html">Locations</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </footer>
+      <div class="flex bottom-footer">
+        <div class="text-half-white flow">
+          <p class="fw-700">Designo Central Office</p>
+          <p>3886 Wellington Street</p>
+          <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+        <div class="text-half-white flow">
+          <p class="fw-700">Contact Us (Central Office)</p>
+          <p class="fw-700">P : +1 253-863-8967</p>
+          <p class="fw-700">M : contact@designo.com</p>
+        </div>
+        <ul class="flex icon-list">
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-facebook.svg" alt="icon-facebook"></a></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-youtube.svg" alt="icon-youtube"></a></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-twitter.svg" alt="icon-twitter"></a></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-pinterest.svg" alt="icon-pinterest"></a></li>
+          <li><a href="#"><img src="../../assets/shared/desktop/icon-instagram.svg" alt="icon-instagram"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
   </body>
 </html>

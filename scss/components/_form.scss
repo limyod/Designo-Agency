@@ -1,13 +1,20 @@
 form {
     --gap: .75rem;
-    input[type="text"], input[type="email"], input[type="tel"] {
+    input[type="text"], input[type="email"], input[type="tel"], textarea{
+        width: 100%;
         background: transparent;
         border: none;
-        border-bottom: 1px solid $clr-primary-white;
+        border-bottom: 2px solid $clr-primary-white;
         padding: .75rem 1rem;
+        color: $clr-primary-white;
+
+        &::placeholder{
+            color: $clr-primary-white;
+            opacity: 50%;
+        }
     }
 
-    input:focus {
+    input:focus, textarea:focus {
         border-bottom: 3px solid white;
         transition: all 0.1s ease;
         outline: none
