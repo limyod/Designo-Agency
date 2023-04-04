@@ -50,7 +50,7 @@
 
 .overlap-footer {
   margin-bottom: -10rem;
-  z-index: 10;
+  z-index: 20;
   position: relative;
 }
 
@@ -80,13 +80,13 @@
   width: 100%;
   top: 0;
   right: 0;
-  background-image: url(../../assets/shared/desktop/bg-pattern-call-to-action.svg);
+  background-image: url(../../dist/assets/shared/desktop/bg-pattern-call-to-action.svg);
   background-repeat: no-repeat;
   background-position: center right;
 }
 
 .grey-circle-background {
-  background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+  background-image: url("../../dist/assets/shared/desktop/bg-pattern-small-circle.svg");
   background-size: contain;
 }
 
@@ -106,7 +106,7 @@
   width: 100%;
   top: 0;
   right: 0;
-  background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+  background-image: url("../../dist/assets/shared/desktop/bg-pattern-small-circle.svg");
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: bottom right;
@@ -118,7 +118,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-image: url("../../dist/assets/shared/desktop/bg-pattern-small-circle.svg");
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: -30% -30%;
@@ -130,7 +130,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-image: url("../../dist/assets/shared/desktop/bg-pattern-small-circle.svg");
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: bottom left;
@@ -756,7 +756,7 @@ header .nav-links a:hover {
   }
 }
 footer {
-  padding-top: 10rem;
+  margin-top: 7.5rem;
   position: relative;
   width: 100%;
   min-height: 320px;
@@ -786,9 +786,6 @@ footer .icon-list img:hover {
 }
 
 @media (min-width: 768px) {
-  footer {
-    padding-top: 3.5rem;
-  }
   footer .nav-links {
     flex-direction: row;
   }
@@ -808,8 +805,20 @@ footer .icon-list img:hover {
     text-align: left;
   }
 }
+.offset-footer {
+  margin-top: 0;
+  padding-top: 10rem;
+  z-index: 10;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .offset-footer {
+    padding-top: 3.5rem;
+  }
+}
 @media (min-width: 992px) {
-  footer {
+  .offset-footer {
     padding-top: 7rem;
   }
 }
@@ -872,21 +881,21 @@ form input:focus, form textarea:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../../assets/home/mobile/image-graphic-design.jpg);
+  background-image: url(../../dist/assets/home/mobile/image-graphic-design.jpg);
 }
 
 .design-cards .web-design {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../../assets/home/mobile/image-web-design.jpg);
+  background-image: url(../../dist/assets/home/mobile/image-web-design.jpg);
 }
 
 .design-cards .app-design {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../../assets/home/mobile/image-app-design.jpg);
+  background-image: url(../../dist/assets/home/mobile/image-app-design.jpg);
 }
 
 @media (min-width: 768px) {
@@ -894,19 +903,19 @@ form input:focus, form textarea:focus {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../../assets/home/tablet/image-graphic-design.jpg);
+    background-image: url(../../dist/assets/home/tablet/image-graphic-design.jpg);
   }
   .design-cards .web-design {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../../assets/home/tablet/image-web-design-small.jpg);
+    background-image: url(../../dist/assets/home/tablet/image-web-design-small.jpg);
   }
   .design-cards .app-design {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../../assets/home/tablet/image-app-design.jpg);
+    background-image: url(../../dist/assets/home/tablet/image-app-design.jpg);
   }
 }
 @media (min-width: 768px) {
@@ -914,19 +923,19 @@ form input:focus, form textarea:focus {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../../assets/home/desktop/image-graphic-design.jpg);
+    background-image: url(../../dist/assets/home/desktop/image-graphic-design.jpg);
   }
   .design-cards .web-design {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../../assets/home/desktop/image-web-design-large.jpg);
+    background-image: url(../../dist/assets/home/desktop/image-web-design-large.jpg);
   }
   .design-cards .app-design {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../../assets/home/desktop/image-app-design.jpg);
+    background-image: url(../../dist/assets/home/desktop/image-app-design.jpg);
   }
 }
 .design-card {
@@ -967,7 +976,7 @@ form input:focus, form textarea:focus {
 }
 @media (min-width: 992px) {
   .app-design {
-    background-image: url(../../assets/home/desktop/image-web-design-large.jpg);
+    background-image: url(../../dist/assets/home/desktop/image-web-design-large.jpg);
   }
 }
 .contact-card {

@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 footer{
-    padding-top: $footer-overlap-sm;
+    margin-top: 7.5rem;
     position: relative;
     width: 100%;
     min-height: 320px;
@@ -41,7 +41,6 @@ footer{
 
 @media (min-width: $md) {
     footer{
-        padding-top: $footer-overlap-md;
         .nav-links {
             flex-direction: row;
         }
@@ -66,8 +65,21 @@ footer{
     }
 }
 
+.offset-footer {
+    margin-top: 0;
+    padding-top: $footer-overlap-sm;
+    z-index: 10;
+    position: relative;
+}
+
+@media (min-width: $md) {
+    .offset-footer {
+        padding-top: $footer-overlap-md;
+    }
+}
+
 @media (min-width: $lg) {
-    footer {
+    .offset-footer {
         padding-top: $footer-overlap-lg;
     }
 }

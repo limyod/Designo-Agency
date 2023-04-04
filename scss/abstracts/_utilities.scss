@@ -53,7 +53,7 @@
 
 .overlap-footer{
     margin-bottom: calc(-1 * $footer-overlap-sm);
-    z-index: 10;
+    z-index: 20;
     position: relative;
 }
 
@@ -68,5 +68,7 @@
         margin-bottom: calc(-1 * $footer-overlap-lg);
     }
 }
+
+
 
 

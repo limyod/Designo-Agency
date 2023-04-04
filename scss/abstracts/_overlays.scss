@@ -14,13 +14,13 @@
     width: 100%;
     top: 0;
     right: 0;
-    background-image: url(../../assets/shared/desktop/bg-pattern-call-to-action.svg);
+    background-image: url(../../dist/assets/shared/desktop/bg-pattern-call-to-action.svg);
     background-repeat: no-repeat;
     background-position: center right;
 }
 
 .grey-circle-background {
-    background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-image: url("../../dist/assets/shared/desktop/bg-pattern-small-circle.svg");
     background-size: contain;
 }
 
@@ -41,7 +41,7 @@
     width: 100%;
     top: 0;
     right: 0;
-    background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-image: url("../../dist/assets/shared/desktop/bg-pattern-small-circle.svg");
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: bottom right;
@@ -54,7 +54,7 @@
         content: '';
         height: 100%;
         width: 100%;
-        background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+        background-image: url("../../dist/assets/shared/desktop/bg-pattern-small-circle.svg");
         background-repeat: no-repeat;
         background-size: 80%;
         background-position: -30% -30%;
@@ -67,7 +67,7 @@
         content: '';
         height: 100%;
         width: 100%;
-        background-image: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+        background-image: url("../../dist/assets/shared/desktop/bg-pattern-small-circle.svg");
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: bottom left;
